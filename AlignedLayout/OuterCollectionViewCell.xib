@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="outerCell" id="gTV-IL-0wX" customClass="OuterCollectionViewCell" customModule="AlignedLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="427" height="211"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NU0-Qt-5eJ" customClass="DynamicCollectionView" customModule="AlignedLayout" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="407" height="191"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="4b7-G1-ITs" customClass="AlignedCollectionViewFlowLayout" customModule="AlignedCollectionViewFlowLayout">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NU0-Qt-5eJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="LZF-s6-4BY"/>
+                <constraint firstAttribute="bottom" secondItem="NU0-Qt-5eJ" secondAttribute="bottom" constant="10" id="VMn-4H-8lF"/>
+                <constraint firstAttribute="trailing" secondItem="NU0-Qt-5eJ" secondAttribute="trailing" constant="10" id="eBV-ta-IAx"/>
+                <constraint firstItem="NU0-Qt-5eJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="l9Z-X9-0zN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="427" height="211"/>
+            <connections>
+                <outlet property="innerCollectionLayout" destination="4b7-G1-ITs" id="qHY-aj-6cJ"/>
+                <outlet property="innerCollectionView" destination="NU0-Qt-5eJ" id="u7y-Qt-kva"/>
+            </connections>
+            <point key="canvasLocation" x="165.94202898550725" y="88.727678571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>
